@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Brightness Settings">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_set_brightness"
+            android:title="Brightness"
+            android:summary="Set App's Brightness"/>
+        <ListPreference
+            android:defaultValue="65"
+            android:dependency="check_set_brightness"
+            android:entries="@array/brightness_level"
+            android:entryValues="@array/brightness_level_values"
+            android:key="set_brightness"
+            android:title="Select Brightness Level" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
